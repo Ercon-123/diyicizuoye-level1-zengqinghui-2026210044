@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Ecron · 个人介绍卡片</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <main class="stage">
+    <article class="card">
+
+      <!-- 头像：用相对路径引用 images 文件夹里的图片 -->
+      <img
+        class="card__avatar"
+        src="images/avatar.jpg"
+        alt="Ecron 的头像：一只围着彩色条纹围巾的卡通雪人">
+
+      <!-- 昵称与学校 -->
+      <h1 class="card__name">Ecron</h1>
+      <p class="card__meta">重庆邮电大学 · 通信工程</p>
+
+      <!-- 一句话介绍 -->
+      <p class="card__intro">骗你两秒，看个好故事，听首歌回血。</p>
+
+      <!-- 基本信息：一行一条，左边是项目，右边是内容 -->
+      <dl class="facts">
+        <div class="facts__row">
+          <dt class="facts__key">MBTI</dt>
+          <dd class="facts__val">INFP</dd>
+        </div>
+        <div class="facts__row">
+          <dt class="facts__key">星座</dt>
+          <dd class="facts__val">射手座</dd>
+        </div>
+        <div class="facts__row">
+          <dt class="facts__key">偶像</dt>
+          <dd class="facts__val">蔡徐坤</dd>
+        </div>
+        <div class="facts__row">
+          <dt class="facts__key">单曲循环</dt>
+          <dd class="facts__val">Spotlight</dd>
+        </div>
+      </dl>
+
+      <!-- 兴趣爱好：作业要求用无序列表 -->
+      <h2 class="card__label">兴趣爱好</h2>
+      <ul class="hobbies">
+        <li class="hobbies__item">
+          <span class="hobbies__title">近景魔术</span>：不是为了炫技，是喜欢别人愣住那两秒
+        </li>
+        <li class="hobbies__item">
+          <span class="hobbies__title">看短剧</span>：规矩立得住，看的不烧心
+        </li>
+        <li class="hobbies__item">
+          <span class="hobbies__title">听音乐</span>：在音乐里寻找力量，感受力量，治愈自己
+        </li>
+      </ul>
+
+      <!-- 底部花体署名 -->
+      <p class="signature">I am an iKun</p>
+
+      <!-- 外部链接：压在署名下面，作业要求必须有一个外链 -->
+      <a class="card__link" href="https://github.com/Ercon-123" target="_blank" rel="noopener noreferrer">
+        GitHub
+      </a>
+
+    </article>
+  </main>
+</body>
+</html>

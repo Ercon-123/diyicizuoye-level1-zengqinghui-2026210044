@@ -1,0 +1,190 @@
+/* ===================================================
+   个人介绍卡片 · style.css
+   清单式排版：信息一行一条，只用一种强调色
+   =================================================== */
+
+:root {
+  --ink:      #22303f;
+  --ink-soft: #7b8a97;
+  --accent:   #35a98c;
+  --line:     #ecf0f2;
+  --card-bg:  #ffffff;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 48px 24px;
+  color: var(--ink);
+  font-family: "Noto Sans SC", "PingFang SC", "Microsoft YaHei", system-ui, sans-serif;
+  font-size: 15px;
+  line-height: 1.7;
+  background-color: #f4f6f6;
+}
+
+/* ---------- 舞台：让卡片水平居中 ---------- */
+
+.stage {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+
+/* ---------- 卡片本体 ---------- */
+
+.card {
+  width: 100%;
+  max-width: 400px;
+  padding: 40px 32px 34px;
+  background-color: var(--card-bg);
+  border: 1px solid var(--line);
+  border-radius: 20px;
+  box-shadow: 0 12px 30px rgba(34, 48, 63, 0.06);
+  text-align: center;
+}
+
+/* ---------- 头像 ---------- */
+
+.card__avatar {
+  display: block;
+  width: 104px;
+  height: 104px;
+  margin: 0 auto 20px;
+  border-radius: 50%;
+  object-fit: cover;
+  background-color: #f4f6f6;
+  border: 1px solid var(--line);
+}
+
+/* ---------- 昵称与学校 ---------- */
+
+.card__name {
+  font-size: 24px;
+  font-weight: 700;
+  letter-spacing: 0.02em;
+  line-height: 1.4;
+}
+
+.card__meta {
+  margin-top: 4px;
+  font-size: 13px;
+  color: var(--ink-soft);
+}
+
+/* ---------- 一句话介绍 ---------- */
+
+.card__intro {
+  margin-top: 14px;
+  font-size: 14px;
+  color: var(--ink-soft);
+}
+
+/* ---------- 基本信息清单 ---------- */
+
+.facts {
+  margin-top: 28px;
+  border-top: 1px solid var(--line);
+  text-align: left;
+}
+
+/* 一行一条：左边项目名，右边内容，用 justify-content 把两边顶开 */
+.facts__row {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  padding: 10px 2px;
+  border-bottom: 1px solid var(--line);
+}
+
+.facts__key {
+  font-size: 13px;
+  color: var(--ink-soft);
+}
+
+.facts__val {
+  font-size: 14px;
+  font-weight: 600;
+  color: var(--ink);
+}
+
+/* ---------- 小标题 ---------- */
+
+.card__label {
+  margin-top: 26px;
+  font-size: 13px;
+  font-weight: 600;
+  letter-spacing: 0.04em;
+  color: var(--ink-soft);
+  text-align: left;
+}
+
+/* ---------- 兴趣爱好：无序列表 ---------- */
+
+.hobbies {
+  margin-top: 6px;
+  /* 用浏览器默认的小圆点，把文字往右边挪一点留出位置 */
+  padding-left: 18px;
+  text-align: left;
+  font-size: 14px;
+  line-height: 1.75;
+}
+
+.hobbies__item {
+  padding: 4px 0;
+}
+
+.hobbies__title {
+  font-weight: 600;
+  color: var(--ink);
+}
+
+/* ---------- 花体署名 ---------- */
+
+.signature {
+  margin-top: 30px;
+  /* 花体字：Gabriola 是 Windows 自带的花体，没有的电脑会退回 Georgia 斜体 */
+  font-family: "Gabriola", Georgia, "Times New Roman", serif;
+  font-style: italic;
+  font-size: 30px;
+  letter-spacing: 0.04em;
+  line-height: 1.4;
+  color: var(--ink);
+}
+
+/* ---------- 外部链接 ---------- */
+
+.card__link {
+  display: inline-block;
+  margin-top: 14px;
+  padding-bottom: 1px;
+  font-size: 13px;
+  letter-spacing: 0.06em;
+  color: var(--ink-soft);
+  text-decoration: none;
+  border-bottom: 1px solid transparent;
+}
+
+.card__link:hover {
+  color: var(--accent);
+  border-bottom-color: var(--accent);
+}
+
+/* ---------- 小屏适配 ---------- */
+
+@media (max-width: 440px) {
+  body {
+    padding: 28px 16px;
+  }
+
+  .card {
+    padding: 32px 24px 28px;
+  }
+}
